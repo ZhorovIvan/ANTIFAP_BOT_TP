@@ -1,17 +1,11 @@
 import os 
 from dotenv import load_dotenv
+import ast
 
 load_dotenv()
 
 BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
 ADMINS_ID = str(os.getenv("ADMINS_ID")).split(',')
-WEBHOOKURL = str(os.getenv("WEBHOOKURL"))
-HOST = str(os.getenv("HOST"))
-PORT = int(os.getenv("PORT"))
-API_URL_JOKES = str(os.getenv("API_URL_JOKES"))
-# mysql
-DB_NAME = str(os.getenv("DB_NAME"))
-USER_NAME = str(os.getenv("USER_NAME"))
-PASSWORD_MYSQL = str(os.getenv("PASSWORD_MYSQL"))
-HOST_MYSQL = str(os.getenv("HOST_MYSQL"))
-PORT_MYSQL = int(os.getenv("PORT_MYSQL"))
+CHAT_FAPPERS_ID = str(os.getenv("CHAT_FAPPERS_ID"))
+TIME_FOR_LOG_NOTIFICATION = str(os.getenv("TIME_FOR_LOG_NOTIFICATION"))
+USER_TIME_DATES = ast.literal_eval(os.environ["USER_TIME_DATES"])
