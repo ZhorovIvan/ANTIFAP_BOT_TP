@@ -6,8 +6,11 @@ import datetime
 
 async def send_message():
     user_dates = config.USER_TIME_DATES
+    private_date = config.USER_TIME_SMOKE
     text = '\n'.join([ get_text_message_for_fapper(user_name, user_dates[user_name]) for user_name in user_dates.keys() ])
     text += '\nНе хмурь бровей из-за ударов рока,\nУпавший духом, гибнет раньше срока.'
+    days_without_smoke = (datetime.date.today() - datetime.date(year=int(private_date['Иван']["yyyy"]),month=int(private_date['Иван']["M"]),day=int(private_date['Иван']["dd"]))).days
+    text += f'\n\nИван не курит кальян {days_without_smoke} дней.\nРви эту жизнь.'
     await bot.send_message(chat_id=config.CHAT_FAPPERS_ID, text=text)
 
 
