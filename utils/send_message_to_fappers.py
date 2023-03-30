@@ -10,7 +10,7 @@ async def send_message():
     text = '\n'.join([ get_text_message_for_fapper(user_name, user_dates[user_name]) for user_name in user_dates.keys() ])
     text += '\nНе хмурь бровей из-за ударов рока,\nУпавший духом, гибнет раньше срока.'
     days_without_smoke = (datetime.date.today() - datetime.date(year=int(private_date['Иван']["yyyy"]),month=int(private_date['Иван']["M"]),day=int(private_date['Иван']["dd"]))).days
-    text += f'\n\nИван не курит кальян {days_without_smoke} дней.\nРви эту жизнь.'
+    text += f'\n\nИван не курит кальян и не ебёт шлюх {days_without_smoke} дней.\nБудь тем за кем пойдут.'
     await bot.send_message(chat_id=config.CHAT_FAPPERS_ID, text=text)
 
 
